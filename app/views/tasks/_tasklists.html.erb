@@ -1,0 +1,23 @@
+<ul class="media-list">
+    <li class="media">
+      <div class="media-body">
+        <div>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>タスク</th>
+                <th>ステータス</th>
+              </tr>
+            </thead>
+            <% @tasks.each do |task| %>
+              <tr>
+                <td><%= link_to task.id, task %></td>
+                <td><%= task.content %></td>
+                <td><%= task.status %></td>
+              </tr>
+            <% end %>
+        </div>
+      </div>
+    </li>
+</ul>
